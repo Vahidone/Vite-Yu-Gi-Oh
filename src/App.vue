@@ -1,39 +1,52 @@
-<script>
-import {store} from "./data/store";
-import CharacterCard from "./components/CharacterCard.vue";
-import CardsContainer from "./components/CardsContainer.vue";
-import Header from "./components/Header.vue";
-import Main from "./components/Main.vue";
 
+
+<script>
+
+import axios from 'axios';
+import { store } from "./data/store";
+import Header from './components/Header.vue';
+import Main from './components/Main.vue';
 export default {
-  name: "App",
-  data () {
-    return {
+  name:'App',
+  components: {
+    Header,
+    Main
+  },
+  data(){
+    return{
       store
     }
   },
-  
- 
-  components: {
-    CardsContainer,
-    CharacterCard,
-    Header,
-    Main,
-    
-    
-   
+  methods:{
+    getApi(){
+      axios.get(store.apiUrl)
+        .then(result =>{
+       
+          console.log(result.data);
+          store.cardList = result.data.data
+        })
+        .catch(error => {
+          console.log(error);
+        })
+    }
   },
-};
+  mounted(){
+    this.getApi();
+    console.log(store.cardList);
+  }
+}
 </script>
 
+
 <template>
-  <Header />
-  <Main />
-  <CardsContainer />
-  <CharacterCard />
+  <Header/>
+  <Main/>
 </template>
 
+
+
 <style lang="scss">
-@use "./components/scss/main.scss";
+
+@use './scss/main.scss';
 
 </style>
