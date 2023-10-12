@@ -7,7 +7,7 @@ export default {
 
 <template>
   <header class="d-flex align-items-center" >
-    <img src="/public/Yugioh_anime_logo.webp" >
+    <img src="/public/Yugioh_anime_logo.webp" alt="">
     <h2>YU-GI-OH Api</h2>
   </header>
 </template>
@@ -19,13 +19,17 @@ export default {
 
   header{
     width: 100%;
-    height: 60px;
-    padding-left: 20px;
+    height: 100px;
+    padding-left: 200px;
+    h2 {
+      font-size: 50px;
+    }
+  
     background-color: white;
     img {
-      width: 70px;
-      height: 24px;
-      margin-right: 10px;
+      width: 130px;
+      height: 40px;
+      margin-right: 20px;
     }
   }
 </style>
