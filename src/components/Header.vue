@@ -16,9 +16,10 @@ export default {
 
 <style lang="scss" scoped>
 @use '../scss/main' as *;
+@use '../../scss/partials/variables' as *;
 
   header{
-    width: 100%;
+    width: $w-100;
     height: 100px;
     padding-left: 200px;
     h2 {
