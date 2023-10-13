@@ -3,10 +3,12 @@
 
 <script>
 import CardContainer from './partials/CardContainer.vue';
+import SearchBar from './partials/SearchBar.vue';
 export default {
   name:'Main',
   components:{
-    CardContainer
+    CardContainer,
+    SearchBar
   }
 }
 </script>
@@ -14,15 +16,9 @@ export default {
 
 <template>
   <main>
-    <div class="container-csm">
-      <select class="form-select form-select-sm mt-4" aria-label="Small select example">
-        <option selected>Alien</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-      </select>
-      <CardContainer/>
-    </div>
+    <SearchBar />
+    <CardContainer/>
+   
   </main>
 </template>
 

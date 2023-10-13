@@ -31,7 +31,7 @@ export default {
 @use '../../../scss/partials/variables' as *;
 
 .result {
-  width: 100%;
+  width: $w-100;
   color: white;
   background-color:$background-result ;
   padding: 10px;

@@ -22,15 +22,18 @@ export default {
     width: $w-100;
     height: 100px;
     padding-left: 200px;
+    background-color: $background-header;
+
+    img {
+      width: 150px;
+      height: 60px;
+      margin-right: 20px;
+    }
+
     h2 {
       font-size: 50px;
     }
   
-    background-color: white;
-    img {
-      width: 130px;
-      height: 40px;
-      margin-right: 20px;
-    }
+  
   }
 </style>

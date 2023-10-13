@@ -11,8 +11,8 @@ export default {
 
 
 <template>
-  <div class="my_col">
-    <div class="my_card">
+  <div class="col-csm">
+    <div class="card-csm">
       <img :src="img">
       <h6>{{ name }}</h6>
       <p>{{ type }}</p>
@@ -27,16 +27,16 @@ export default {
 @use '../../../scss/partials/general' as *;
 
 
-.my_col {
+.col-csm{
   width: 20%;
   margin-bottom: 15px;
 }
-.my_card{
+.card-csm{
   background-color: $background-orange;
   text-align: center;
-  height: 100%;
+  height: $h-100;
   img{
-    max-width:100% ;
+    max-width: $max-100;
     margin-bottom: 10px;
     }
   }

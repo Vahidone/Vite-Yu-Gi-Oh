@@ -1,8 +1,15 @@
 
 
 <script>
+import { store } from '../../data/store';
+
 export default {
-  name: 'SearchBar'
+  name: 'SearchBar',
+  data () {
+    return {
+      store
+    }
+  }
 
 }
 </script>
@@ -11,18 +18,18 @@ export default {
   <div class="container-csm">
     <div class="row justify-content-center">
       <div class="col-auto">
-        <input type="text" class="form-control" placeholder="Search Character">
+        <input v-model="store.nameToSearch" type="text" class="form-control" placeholder="Search Character">
       </div>
       <div class="col-auto">
         <select class="form-select" aria-label="Default select example">
           <option selected>Select status</option>
-          <option value="1">Alive</option>
-          <option value="2">Dead</option>
-          <option value="3">Unknown</option>
+          <option value="alive">Alive</option>
+          <option value="dead">Dead</option>
+          <option value="unknown">Unknown</option>
         </select>
       </div>
       <div class="col-auto">
-        <button class="btn btn-info">Search</button>
+        <button @click="$emit('startSearch')" class="btn btn-info">Search</button>
       </div>
       <div class="col-auto">
         <button class="btn btn-warning">Reset</button>
