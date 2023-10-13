@@ -9,6 +9,13 @@ export default {
     return {
       store
     }
+  },
+  methods: {
+    reset () {
+      store.nameToSearch = '',
+      store.statusToSearch = '',
+      $emit('startSearch')
+    }
   }
 
 }
@@ -32,7 +39,7 @@ export default {
         <button @click="$emit('startSearch')" class="btn btn-info">Search</button>
       </div>
       <div class="col-auto">
-        <button class="btn btn-warning">Reset</button>
+        <button @click="reset" class="btn btn-warning">Reset</button>
       </div>
 
     </div>
