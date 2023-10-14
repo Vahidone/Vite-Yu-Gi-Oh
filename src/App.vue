@@ -28,7 +28,8 @@ export default {
 
         })
         .catch(error => {
-          console.log(error);
+          store.research = [],
+          store.cardList = ''
         })
     },
     getApiType(){
