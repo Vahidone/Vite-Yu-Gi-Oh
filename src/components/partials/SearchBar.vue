@@ -16,7 +16,7 @@ export default {
   <div class="container-csm">
     <div class="row">
       <div class="col-auto">
-        <input type="text" class="form-control" placeholder="Search Character">
+        <input type="text" class="form-control" placeholder="Search Archtype">
       </div>
       <div class="col-auto">
         <button class="btn btn-info">Search</button>
