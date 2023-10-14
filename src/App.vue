@@ -1,18 +1,15 @@
 <script>
-
-
 import { store } from './data/store';
 import axios from 'axios';
 import Header from './components/Header.vue';
-import Main from './components/Main.vue';
-
-
+import Main from "./components/main.vue";
+import SearchBar from './components/partials/SearchBar.vue';
 export default {
   name:'App',
   components: {
     Header,
-    Main
-  
+    Main,
+    SearchBar
   },
   data(){
     return{
@@ -44,7 +41,8 @@ export default {
         .catch(error => {
           console.log(error);
         })
-    }
+    },
+   
   },
   mounted(){
     this.getApi();
@@ -56,6 +54,7 @@ export default {
 
 <template>
   <Header/>
+  <SearchBar @startSearch="getApi" />
   <Main @changeResearch="getApi"/>
 </template>
 
