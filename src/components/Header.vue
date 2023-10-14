@@ -7,7 +7,7 @@ export default {
 
 <template>
   <header class="d-flex align-items-center" >
-    <img src="/public/Yugioh_anime_logo.webp" alt="">
+    <img src="/public/Yugioh_anime_logo.webp">
     <h2>YU-GI-OH Api</h2>
   </header>
 </template>
@@ -16,24 +16,17 @@ export default {
 
 <style lang="scss" scoped>
 @use '../scss/main' as *;
-@use '../../scss/partials/variables' as *;
+@use "../../scss/partials/variables" as *;
 
   header{
-    width: $w-100;
-    height: 100px;
-    padding-left: 200px;
-    background-color: $background-header;
-
+    width: 100%;
+    height: 60px;
+    padding-left: 20px;
+    background-color: $bg-white;
     img {
-      width: 150px;
-      height: 60px;
-      margin-right: 20px;
+      width: 75px;
+      height: 25px;
+      margin-right: 10px;
     }
-
-    h2 {
-      font-size: 50px;
-    }
-  
-  
   }
 </style>

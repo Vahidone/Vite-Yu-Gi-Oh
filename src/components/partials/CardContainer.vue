@@ -1,5 +1,3 @@
-
-
 <script>
 import { store } from '../../data/store';
 import Cards from './Cards.vue';
@@ -16,7 +14,6 @@ export default {
     }
   },
   mounted(){
-
     console.log(store.cardList);
   }
 }
@@ -43,11 +40,11 @@ export default {
 
 
 <style lang="scss" scoped>
+@use "../../../scss/partials/variables" as *;
 
   .container {
-    
-    background-color: white;
-    padding: 50px 40px 0 40px;
+    background-color: $bg-white;
+    padding: 45px 35px 0 35px;
   }
 
 </style>

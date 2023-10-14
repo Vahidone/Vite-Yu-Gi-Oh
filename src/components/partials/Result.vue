@@ -12,7 +12,7 @@ export default {
       if(store.cardList.length > 0){
         return 'Found ' + store.cardList.length + ' cards';
       }
-      return 'Cards no found';
+      return 'Cards not found';
     }
   }
 }
@@ -31,9 +31,9 @@ export default {
 @use '../../../scss/partials/variables' as *;
 
 .result {
-  width: $w-100;
-  color: white;
-  background-color:$background-result ;
+  width: 100%;
+  color: $color-white;
+  background-color:$bg-result ;
   padding: 10px;
 }
 

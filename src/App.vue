@@ -1,15 +1,8 @@
-
-
 <script>
-
+import { store } from './data/store';
 import axios from 'axios';
-import { store } from "./data/store";
 import Header from './components/Header.vue';
-import Main from './components/Main.vue';
-
-
-
-
+import Main from "./components/main.vue";
 export default {
   name:'App',
   components: {
@@ -22,19 +15,27 @@ export default {
     }
   },
   methods:{
-    getApi(){
-      axios.get(store.apiUrl, {
-        params: {
-          name: store.nameToSearch,
-          status: store.statusToSearch
+    getApi() {
+      axios.get(store.apiUrl,{
+        params:{
+          archetype:store.research
         }
-
       })
         .then(result =>{
-
-          console.log(result.data);
           store.cardList = result.data.data
+
         })
+        .catch(error => {
+          console.log(error);
+        })
+    },
+    getApiType(){
+      axios.get(store.typeUrl)
+        .then(result =>{
+          store.archetypeList = result.data
+
+        })
+  
         .catch(error => {
           console.log(error);
         })
@@ -42,7 +43,7 @@ export default {
   },
   mounted(){
     this.getApi();
-    console.log(store.cardList);
+    this.getApiType();
   }
 }
 </script>
@@ -50,7 +51,7 @@ export default {
 
 <template>
   <Header/>
-  <Main/>
+  <Main @changeResearch="getApi"/>
 </template>
 
 
