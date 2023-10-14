@@ -1,13 +1,18 @@
 <script>
+
+
 import { store } from './data/store';
 import axios from 'axios';
 import Header from './components/Header.vue';
-import Main from "./components/main.vue";
+import Main from './components/Main.vue';
+
+
 export default {
   name:'App',
   components: {
     Header,
     Main
+  
   },
   data(){
     return{
