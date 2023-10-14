@@ -1,7 +1,6 @@
 
-@use './partials/general' as * ;
-@use './partials/variables' as *;
 
+@use './partials/variables' as *;
+@use './partials/general' as * ;
 
 @import 'bootstrap/scss/bootstrap';
-
