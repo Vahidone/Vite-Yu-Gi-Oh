@@ -50,7 +50,7 @@ export default {
     select {
       width: 160px;
       height: 40px;
-      margin-left: 180px;
+      margin-left: 300px;
     }
   }
 </style>
